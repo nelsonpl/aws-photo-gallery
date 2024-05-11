@@ -32,45 +32,10 @@ The `backend` folder contains the source code of the backend of the application.
 - `deploy`: Compiles TypeScript code, packages, and deploys to AWS SAM.
 - `test`: Runs tests using Jest.
 
-### Frontend
-
-The `frontend` folder contains the source code of the frontend of the application. It is developed using the Next.js framework, which is based on React.
-
-#### Technologies Used:
-
-- **Next.js**: React framework for server-side rendering.
-- **React**: JavaScript library for building user interfaces.
-- **Tailwind CSS**: Customizable CSS framework for responsive design.
-
-#### Required Packages:
-
-- **Dependencies**:
-  - `axios`: HTTP client for making requests to the backend.
-  - `next`, `react`, `react-dom`: Next.js and React packages.
-
-- **DevDependencies**:
-  - `@types/node`, `@types/react`, `@types/react-dom`: TypeScript types for Node.js and React.
-  - `eslint`, `eslint-config-next`: Linting tools.
-  - `postcss`, `tailwindcss`, `typescript`: Styling and TypeScript compilation tools.
-
-#### Scripts:
-
-- `dev`: Starts the Next.js development server.
-- `build`: Compiles the Next.js project for production.
-- `start`: Starts the Next.js server in production.
-- `lint`: Runs linting check on the code.
-
 ## How to Run
 
 To run this project locally, follow these steps:
 
-1. **Backend**:
-   - Navigate to the `backend` folder.
-   - Run `yarn install` to install the dependencies.
-   - Run `yarn deploy` to compile, package, and deploy to AWS SAM.
-
-2. **Frontend**:
-   - Navigate to the `frontend` folder.
-   - Run `yarn install` to install the dependencies.
-   - Run `yarn dev` to start the development server.
-
+- Navigate to the `backend` folder.
+- Run `yarn install` to install the dependencies.
+- Run `yarn deploy` to compile, package, and deploy to AWS SAM.
