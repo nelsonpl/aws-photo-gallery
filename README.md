@@ -1,41 +1,40 @@
-# AWS Photo Gallery
+# Project Name: Photo Gallery Backend
 
-## Overview
+## Description
+Backend is a serverless backend application built using AWS SAM (Serverless Application Model) framework. It provides APIs for managing photos, including uploading, viewing, listing, and deleting. The application utilizes AWS Lambda functions, Amazon DynamoDB for data storage, and Amazon S3 for storing uploaded images. It is written in TypeScript and includes Jest for testing.
 
-This project is a web application consisting of a backend and a frontend part. The backend is responsible for providing services and APIs, while the frontend is the user interface of the application.
+## Installation
+1. Clone the repository.
+2. Navigate to the project directory.
+3. Run `npm install` to install dependencies.
 
-### Backend
+## Usage
+- Run `npm run deploy` to deploy the application to AWS.
+- Run `npm test` to execute tests.
 
-The `backend` folder contains the source code of the backend of the application. It is developed in TypeScript and uses some popular tools for development and deployment.
+## Deployment
+To deploy the project, ensure the following steps:
+1. Set up environment variables:
+   - `STACK_NAME`: The name of the AWS CloudFormation stack.
+   - `S3_BUCKET_NAME`: The name of the S3 bucket where images will be stored.
+   - `DYNAMODB_TABLE_NAME`: The name of the DynamoDB table for storing photo data.
+2. Ensure AWS CLI is configured with appropriate permissions.
+3. Run `npm run deploy`.
 
-#### Technologies Used:
+## Configuration
+- Environment variables are defined in the `template.yaml` file.
 
-- **Node.js**: Server-side JavaScript runtime environment.
-- **AWS Lambda**: Serverless cloud computing platform.
-- **SAM (Serverless Application Model)**: Framework for building and managing serverless applications on AWS.
-- **Jest**: JavaScript testing framework.
+## Dependencies
+- **aws-lambda**: ^1.0.7
+- **lambda-multipart-parser-v2**: ^1.0.3
 
-#### Required Packages:
+## Development Dependencies
+- **TypeScript**: ^5.4.5
+- **Jest**: ^28.0.0
+- **ts-jest**: ^28.0.0
 
-- **DevDependencies**:
-  - `@types/aws-lambda`: TypeScript types for AWS Lambda.
-  - `@types/jest`, `@types/mocha`, `@types/node`: TypeScript types for testing.
-  - `@types/uuid`: TypeScript types for UUID.
-  - `jest`, `ts-jest`, `typescript`: Tools for testing and TypeScript compilation.
+## Contributing
+Contributions are welcome! Feel free to open issues or submit pull requests to improve the project.
 
-- **Dependencies**:
-  - `aws-lambda`: AWS Lambda package.
-  - `lambda-multipart-parser-v2`: Multipart parser for AWS Lambda.
-
-#### Scripts:
-
-- `deploy`: Compiles TypeScript code, packages, and deploys to AWS SAM.
-- `test`: Runs tests using Jest.
-
-## How to Run
-
-To run this project locally, follow these steps:
-
-- Navigate to the `backend` folder.
-- Run `yarn install` to install the dependencies.
-- Run `yarn deploy` to compile, package, and deploy to AWS SAM.
+## License
+This project is licensed under the [MIT License](LICENSE).
