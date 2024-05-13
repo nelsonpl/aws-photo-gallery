@@ -32,7 +32,7 @@ Resources:
         - AmazonS3FullAccess
       Environment:
         Variables:
-          BUCKET_NAME: !Sub "${S3_BUCKET_NAME}"
+          BUCKET_NAME: nelson-fullstackassignment-stack-bucket
       Events:
         UploadImageApi:
           Type: Api
@@ -52,7 +52,7 @@ Resources:
         - AmazonS3ReadOnlyAccess
       Environment:
         Variables:
-          BUCKET_NAME: !Sub "${S3_BUCKET_NAME}"
+          BUCKET_NAME: nelson-fullstackassignment-stack-bucket
       Events:
         ViewImageApi:
           Type: Api
@@ -70,8 +70,8 @@ Resources:
         - AmazonDynamoDBFullAccess 
       Environment:
         Variables:
-          TABLE_NAME: !Sub "${DYNAMODB_TABLE_NAME}"
-          BUCKET_NAME: !Sub "${S3_BUCKET_NAME}"
+          TABLE_NAME: nelson-fullstackassignment-stack-table-photos
+          BUCKET_NAME: nelson-fullstackassignment-stack-bucket
       Events:
         SavePhotoApi:
           Type: Api
@@ -89,8 +89,8 @@ Resources:
         - AmazonDynamoDBFullAccess 
       Environment:
         Variables:
-          TABLE_NAME: !Sub "${DYNAMODB_TABLE_NAME}"
-          BUCKET_NAME: !Sub "${S3_BUCKET_NAME}"
+          TABLE_NAME: nelson-fullstackassignment-stack-table-photos
+          BUCKET_NAME: nelson-fullstackassignment-stack-bucket
       Events:
         ListPhotoApi:
           Type: Api
@@ -108,8 +108,8 @@ Resources:
         - AmazonDynamoDBFullAccess 
       Environment:
         Variables:
-          TABLE_NAME: !Sub "${DYNAMODB_TABLE_NAME}"
-          BUCKET_NAME: !Sub "${S3_BUCKET_NAME}"
+          TABLE_NAME: nelson-fullstackassignment-stack-table-photos
+          BUCKET_NAME: nelson-fullstackassignment-stack-bucket
       Events:
         DeletePhotoApi:
           Type: Api
@@ -120,12 +120,12 @@ Resources:
   ImageBucket:
     Type: AWS::S3::Bucket
     Properties:
-      BucketName: !Sub "${S3_BUCKET_NAME}"
+      BucketName: nelson-fullstackassignment-stack-bucket
 
   PhotosTable:
     Type: AWS::DynamoDB::Table
     Properties:
-      TableName: !Sub "${DYNAMODB_TABLE_NAME}"
+      TableName: nelson-fullstackassignment-stack-table-photos
       AttributeDefinitions:
         - AttributeName: photoId
           AttributeType: S
@@ -138,4 +138,4 @@ Resources:
 
 Outputs:
   ImageBucketName:
-    Value: !Sub "${S3_BUCKET_NAME}"
+    Value: nelson-fullstackassignment-stack-bucket
