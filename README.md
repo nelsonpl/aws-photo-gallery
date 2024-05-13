@@ -1,4 +1,4 @@
-# Project Name: Photo Gallery Backend
+# Photo Gallery Backend
 
 ## Description
 Backend is a serverless backend application built using AWS SAM (Serverless Application Model) framework. It provides APIs for managing photos, including uploading, viewing, listing, and deleting. The application utilizes AWS Lambda functions, Amazon DynamoDB for data storage, and Amazon S3 for storing uploaded images. It is written in TypeScript and includes Jest for testing.
